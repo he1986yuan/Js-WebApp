@@ -1,0 +1,192 @@
+*{margin: 0;padding: 0}
+body{position: relative;font-family: '微软雅黑',Arial;font-size: 26px}
+li{list-style: none;}
+.page{position: absolute;width: 100%;height:100%;display: none}
+.show{display: block;}
+
+.page:nth-of-type(1){z-index: 10}
+.page:nth-of-type(2){z-index: 9}
+.page:nth-of-type(3){z-index: 8}
+
+@keyframes tree{
+	100%{
+		transform:translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes logo{
+	100%{opacity: 1}
+}
+@keyframes cloud{
+	100%{
+		transform:translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes shake{
+	0%{transform:rotate(0);}
+	20%{transform:rotate(30deg);}
+	40%{transform:rotate(-30deg);}
+	60%{transform:rotate(30deg);}
+	80%{transform:rotate(-30deg);}
+	100%{transform:rotate(0deg);}
+}
+.tree{
+	position: absolute;
+	top:10%;
+	opacity: 0;
+	transform:translateY(150px);
+	animation:tree 1.5s;
+	animation-fill-mode:forwards;	/*默认恢复到原来的状态,如果设置为forwards状态为目的地的状态*/
+}
+.title{
+	position: relative;
+	top:55%;
+	transform:translateY(150px);
+	animation:tree 1.5s ease 0.5s;
+	opacity: 0;
+	animation-fill-mode:forwards;	/*默认恢复到原来的状态,如果设置为forwards状态为目的地的状态*/
+}
+.title .shake{
+	position: absolute;
+	left:525px;
+	top:-30px;
+	width: 28px;
+	height: 31px;
+	background: url(../img/shake.png);
+	animation:shake 1s linear 2s;
+	transform-origin:left bottom;
+}
+.logo{
+	position: absolute;
+	bottom: 50px;
+	text-align: center;
+	width:100%;
+	opacity: 0;
+	animation:logo 1s ease 1.5s;
+	animation-fill-mode:forwards;	/*默认恢复到原来的状态,如果设置为forwards状态为目的地的状态*/
+}
+
+.cloud{
+	background: url(../img/cloud.png);
+	position: absolute;
+	background-size:contain;
+	transform:translateX(100px);
+	animation:cloud 3s linear 0s infinite alternate;
+	
+	animation-fill-mode:forwards;	/*默认恢复到原来的状态,如果设置为forwards状态为目的地的状态*/
+}
+.cloud:nth-of-type(1){
+	width:91px;
+	height: 70px;
+	left: 79px;
+	top:77px;
+}
+.cloud:nth-of-type(2){
+	width:58px;
+	height: 44px;
+	left: 402px;
+	top:15px;
+}
+.cloud:nth-of-type(3){
+	width:54px;
+	height: 41px;
+	left: 300px;
+	top:140px;
+}
+
+/*轮播图*/
+#index{transition:all 1s;}
+.wrapPic{overflow: hidden;position: relative;}
+.wrapPic ul{width: 500%;overflow: hidden;transition:all 0.5s;}
+.wrapPic li{float: left;width:20%;}
+.wrapPic li img{width: 100%;height: 342px}
+.wrapPic .picMask{position: absolute;left: 0;bottom: 0px;width: 100%;height: 50px;
+	color: #fff;
+	font-size: 29px;
+	text-indent: 26px;	
+	background:-webkit-linear-gradient(bottom,rgba(0,0,0,0.9) 0,rgba(0,0,0,0.8) 10%,rgba(0,0,0,0.7) 20%,rgba(0,0,0,0) 100%)
+}
+.picMask p{  position: absolute; left: 0; bottom: 38px; z-index: 9999;}
+.picMask nav a{
+	width: 10px;
+	height: 10px;
+	background: #fff;
+	border-radius: 50%;
+	float: left;
+	margin-right: 15px;
+	opacity: 0.3
+}
+.picMask nav{
+	position: absolute;
+	right: 0;
+	bottom: 20px
+}
+.picMask .active{
+	opacity: 1;
+}
+
+/*评分*/
+.score{z-index: -999;position: relative;}
+.score h2{font-size: 28px;line-height: 60px}
+.score{padding-left: 20px}
+.score li{height: 60px}
+.score nav{position: relative;}
+.score span{float: left;margin-right: 120px}
+.score a{margin-right:25px;width: 38px;height: 36px;display: inline-block;
+	float: left;background: url(../img/star.png) -38px 0px}
+.score .active{background-position: 0 0}
+
+/*给景区添加标签*/
+.tags{padding-left: 20px}
+.tags h2{font-size: 29px}
+.tags input{display: none;}
+.tags label{	
+	display: inline-block;
+	float: left;
+	text-align: center;
+	line-height: 72px;
+}
+.tags span{
+	width: 128px;
+	height:72px;
+	display: inline-block;
+	float: left;
+	text-align: center;
+	line-height: 72px;
+	margin:20px 20px 0px 0px;
+	border-radius: 20px
+}
+.tags input:checked+span{
+	background: #3c9bbb;
+	color:#fff;
+}
+/*提交按钮*/
+.btn{width:95%;height:30px;
+	border-radius: 20px;
+	text-align: center;position: absolute;
+	bottom: 5px;
+	left:17px;
+	font-size: 30px;
+	background: #3c9bbb;
+	display: inline-block;
+	height: 74px;
+	color:#fff;
+}
+/*错误提示信息*/
+.info{
+	position: absolute;
+	bottom: 100px;
+	text-align: center;
+	width: 100%;
+	transform: scale(0);
+	opacity: 0;
+}
+
+/*感谢页面*/
+#thank{
+	background:rgba(0,0,0,0.7) url(../img/mask.png) no-repeat center center;
+	transition:all 2s;
+	z-index:9999;
+	opacity: 1;
+}

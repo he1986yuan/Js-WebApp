@@ -1,0 +1,126 @@
+<!Doctype html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=640,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+	<!-- 欢迎页面 -->
+	<section class="page show" id="welcome">
+		<div class="tree">
+			<img src="img/tree.jpg">
+			<span class="cloud"></span>
+			<span class="cloud"></span>
+			<span class="cloud"></span>
+		</div>
+		<div class="title">
+			<img src="img/title.png">
+			<span class="shake"></span>
+		</div>
+		<div class="logo">
+			<img src="img/logo.png">
+		</div>
+	</section>
+	<!-- 内容主页 -->
+	<section class="page" id="index">
+		<!-- 轮播图 -->
+		<section class="wrapPic">
+			<ul>
+				<li><img src="img/1.jpg"></li>
+				<li><img src="img/2.jpg"></li>
+				<li><img src="img/3.jpg"></li>
+				<li><img src="img/4.jpg"></li>
+				<li><img src="img/5.jpg"></li>
+			</ul>
+			<div class="picMask">
+				<p>唐家岭一日游</p>
+				<nav>
+					<a href="javascript:;" class="active"></a>
+					<a href="javascript:;"></a>
+					<a href="javascript:;"></a>
+					<a href="javascript:;"></a>
+					<a href="javascript:;"></a>
+				</nav>
+			</div>
+		</section>
+		<!-- 给景区评分 -->
+		<section class="score">
+			<h2>给景区评分</h2>
+			<ul>
+				<li>
+					<span>综合印象</span>
+					<nav>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+					</nav>
+					<input type="hidden" value="0">
+				</li>
+				<li>
+					<span>服务指数</span>
+					<nav>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+					</nav>
+					<input type="hidden" value="0">
+				</li>
+				<li>
+					<span>消费指数</span>
+					<nav>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+					</nav>
+					<input type="hidden" value="0">
+				</li>
+			</ul>
+		</section>
+
+		<!-- 给景区添加标签 -->
+		<section class="tags">
+			<h2>给景区添加标签</h2>
+			<label>
+				<input type="radio" name="tag" value="服务好">
+				<span>服务好</span>
+			</label>
+			<label>
+				<input type="radio" name="tag" value="景色赞">
+				<span>景色赞</span>
+			</label>
+			<label>
+				<input type="radio" name="tag" value="千篇一律">
+				<span>千篇一律</span>
+			</label>
+			<label>
+				<input type="radio" name="tag" value="看人海">
+				<span>看人海</span>
+			</label>
+			<label>
+				<input type="radio" name="tag" value="挤爆了">
+				<span>挤爆了</span>
+			</label>
+		</section>
+		<!-- 按钮 -->
+		<p class="info">这是测试数据</p>
+		<input type="button" value="提交" class="btn">
+	</section>
+	<!-- 这是感谢页面 -->
+	<section class="page" id="thank">
+
+	</section>
+</body>
+<script type="text/javascript">
+	document.body.style.height = document.documentElement.clientHeight +'px';
+	fnLoad();
+</script>
+</html>
