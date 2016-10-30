@@ -1,4 +1,4 @@
-##这是一个单页webAPP页面
-- 基于H5 CSS3的transition动画
-- 有自己封装的JS动画方法
-- 希望大神帮我优化
+##杩欐槸涓�涓崟椤祑ebAPP椤甸潰
+- 鍩轰簬H5 CSS3鐨則ransition鍔ㄧ敾
+- 鏈夎嚜宸卞皝瑁呯殑JS鍔ㄧ敾鏂规硶
+- 甯屾湜楂樻墜甯垜浼樺寲
